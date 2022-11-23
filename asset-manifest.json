@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ts-socketio/static/css/main.4169f80c.css",
+    "main.js": "/ts-socketio/static/js/main.442856d9.js",
+    "index.html": "/ts-socketio/index.html",
+    "main.4169f80c.css.map": "/ts-socketio/static/css/main.4169f80c.css.map",
+    "main.442856d9.js.map": "/ts-socketio/static/js/main.442856d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4169f80c.css",
+    "static/js/main.442856d9.js"
+  ]
+}
