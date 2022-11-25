@@ -2,8 +2,15 @@ import { useState, useEffect } from "react";
 import io from "socket.io-client";
 const socket = io("wss://socketio-vivek.herokuapp.com");
 
-function sendMessage(name, message) {
-	socket.emit("messageFromFrontend", { message: message, username: name });
+function sendMessage(name, message, clearMessage) {
+	if(name === ""){
+		alert("please enter a name")
+	}else if(message === ""){
+		alert("please enter a message")
+	}else{
+		socket.emit("messageFromFrontend", { message: message, username: name });
+		clearMessage()
+	}
 }
 
 function App() {
@@ -35,7 +42,7 @@ function App() {
 				value={message}
 				onChange={(e) => setMessage(e.target.value)}
 			/>
-			<button onClick={() => sendMessage(name, message)}>Send!</button>
+			<button onClick={() => sendMessage(name, message, () => setMessage(""))}>Send!</button>
 			<ul>
 				{messageList.map((message) => (
 					<li>
